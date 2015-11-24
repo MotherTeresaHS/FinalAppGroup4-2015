@@ -1,4 +1,4 @@
--- LessonSix
+-- Lesson 9
 
 -- Created by: Lucas
 -- Created on: Nov - 2015
@@ -6,6 +6,7 @@
 -- main starting screen
 
 -- variables
+
 
 -- Use this function to perform your initial setup
 function setup()  
@@ -19,20 +20,19 @@ function setup()
     -- create the scenes
     Scene("splash", SplashScreenScene)
     Scene("play", MainScene)
-    Scene("shop", Shop)
-    Scene("Main", MainGame)
+    Scene("gameLogo", GameLogo)
+    
     Scene.Change("splash")
 end
 
 -- This function gets called once every frame
 function touched(touch)
     
-    -- local variables 
    Scene.Touched(touch)
 end
 
 function draw()
-    background(0, 0, 0, 255)
+    background(18, 21, 19, 255)
     
     Scene.Draw()
     
