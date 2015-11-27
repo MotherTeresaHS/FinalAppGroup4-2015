@@ -1,3 +1,10 @@
+-- Company Logo
+
+-- Created by: Lucas
+-- Created on: Nov - 2015
+-- Created for: ICS2O
+-- main starting screen
+
 SplashScreenScene = class()
 
 -- global to this file

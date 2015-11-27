@@ -1,4 +1,4 @@
--- Lesson 9
+-- Main Scene
 
 -- Created by: Lucas
 -- Created on: Nov - 2015
