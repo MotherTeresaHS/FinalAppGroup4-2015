@@ -1,31 +1,25 @@
 MainScene = class()
-local backButton
-local mainButton
+local startButton
+local creditButton
 
 function MainScene:init()
-    sprite("Dropbox:Purple Level Menu Button")
-    backButton = Button("Dropbox:Red Forward Circle Button", vec2(WIDTH/2, HEIGHT/2+200))
-    mainButton = Button("Dropbox:Purple Forward Circle Button", vec2(WIDTH/2, HEIGHT/2-200))
+    --sprite("Dropbox:Red Forward Circle Button")
+    startButton = Button("Dropbox:Red Forward Circle Button", vec2(WIDTH/2, HEIGHT/2))
 
 end
 
 function MainScene:draw()
-    sprite("Documents:Mainmenutest", WIDTH/2, HEIGHT/2, 1024, 768)
-    backButton:draw()
-    mainButton:draw()
+    background(153, 56, 46, 255)
+    startButton:draw()
+    sprite()
     
 end
 
 function MainScene:touched(touch)
-    backButton:touched(touch)
-    mainButton:touched(touch)
+    startButton:touched(touch)
     
-    if(backButton.selected == true) then
-        Scene.Change("shop")
+    if(startButton.selected == true) then
+        Scene.Change("mainGame")
         end
-    if(mainButton.selected == true) then
-        Scene.Change("Main")
-    end
-
  end
 
