@@ -21,6 +21,11 @@ function setup()
     Scene("splash", SplashScreenScene)
     Scene("play", MainScene)
     Scene("gameLogo", GameLogo)
+    Scene("credits", Credits)
+    Scene("options", Options)
+    Scene("store", Store)
+    Scene("tutorial", Tutorial)
+    Scene("mainGame", MainGame)
     
     Scene.Change("splash")
 end
