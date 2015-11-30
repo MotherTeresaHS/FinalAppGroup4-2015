@@ -7,6 +7,7 @@ end
 
 function Credits:draw()
     -- Codea does not automatically call this method
+    sprite("Dropbox:Credits", WIDTH/2, HEIGHT/2)
 end
 
 function Credits:touched(touch)
