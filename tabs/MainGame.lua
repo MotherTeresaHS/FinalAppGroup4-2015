@@ -1,3 +1,10 @@
+-- FinalApp
+
+-- Created by: Lucas
+-- Created on: Nov - 2015
+-- Created for: ICS2OR-1
+-- Main game
+
 MainGame = class()
 
 function MainGame:init(x)
