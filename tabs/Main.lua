@@ -1,12 +1,10 @@
--- Lesson 9
+-- FinalApp
 
 -- Created by: Lucas
 -- Created on: Nov - 2015
--- Created for: ICS2O
--- main starting screen
-
--- variables
-
+-- Created for: ICS2OR-1
+-- Main starting screen
+-- Sets a blank slate for the entire program.
 
 -- Use this function to perform your initial setup
 function setup()  

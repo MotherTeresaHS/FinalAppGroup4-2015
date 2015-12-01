@@ -1,3 +1,11 @@
+-- FinalApp
+
+-- Created by: Lucas
+-- Created on: Nov - 2015
+-- Created for: ICS2OR-1
+-- Game logo
+-- Displays the game logo
+
 GameLogo = class()
 
 local startTimeTwo

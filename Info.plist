@@ -13,8 +13,8 @@
 		<string>MainGame</string>
 		<string>Credits</string>
 		<string>Options</string>
-		<string>Store</string>
 		<string>Tutorial</string>
+		<string>Store</string>
 		<string>HelperClass</string>
 	</array>
 	<key>Description</key>
