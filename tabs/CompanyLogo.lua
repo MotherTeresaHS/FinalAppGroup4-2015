@@ -12,7 +12,7 @@ SplashScreenScene = class()
 local startTime
 
 function SplashScreenScene:init()
-    
+    music("Game Music One:Sporting Arena")
     startTime = ElapsedTime
 end
 
@@ -30,6 +30,4 @@ function SplashScreenScene:draw()
 end
 
 function SplashScreenScene:touched(touch)
-    -- Codea does not automatically call this method
-    
 end

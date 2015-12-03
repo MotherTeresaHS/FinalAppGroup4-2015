@@ -6,6 +6,9 @@
 -- Main starting screen
 -- Sets a blank slate for the entire program.
 
+-- global variable
+topscore = nil
+
 -- Use this function to perform your initial setup
 function setup()  
     supportedOrientations(LANDSCAPE_ANY)
@@ -15,7 +18,9 @@ function setup()
     noStroke()
     pushStyle()
     
-    -- create the scenes
+    topScore = readGlobalData("highScore", 0)
+    
+    -- create the nes
     Scene("splash", SplashScreenScene)
     Scene("play", MainScene)
     Scene("gameLogo", GameLogo)
