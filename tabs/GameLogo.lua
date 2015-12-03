@@ -24,6 +24,7 @@ function GameLogo:draw()
     print("End time is" .. startTimeTwo + 1)
     if(startTimeTwo + 1 < ElapsedTime) then
         Scene.Change("play")
+        music.stop("Game Music One:Sporting Arena")
         print("The end time is" .. ElapsedTime)
     end
 end
