@@ -7,7 +7,8 @@
 -- Sets a blank slate for the entire program.
 
 -- global variable
-topscore = nil
+-- fix this!
+topScore = readGlobalData
 
 -- Use this function to perform your initial setup
 function setup()  
