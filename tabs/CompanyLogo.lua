@@ -12,7 +12,6 @@ SplashScreenScene = class()
 local startTime
 
 function SplashScreenScene:init()
-    music("Game Music One:Sporting Arena")
     startTime = ElapsedTime
 end
 

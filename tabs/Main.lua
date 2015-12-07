@@ -29,8 +29,10 @@ function setup()
     Scene("store", Store)
     Scene("tutorial", Tutorial)
     Scene("mainGame", MainGame)
-    
+    Scene("endlessMode", EndlessMode)
+    Scene("leaderboard", LeaderBoard)
     Scene.Change("splash")
+    
 end
 
 -- This function gets called once every frame

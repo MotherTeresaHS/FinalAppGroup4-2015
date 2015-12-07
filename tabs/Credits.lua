@@ -28,7 +28,7 @@ function Credits:draw()
     
     -- The developpers
     text("Jacob Braun 🇩🇪", WIDTH/2-360, HEIGHT/2+100)
-    text("Lucas Stuccato 🇮🇹", WIDTH/2-340, HEIGHT/2+50)
+    text("Lucas Scuccato 🇮🇹", WIDTH/2-340, HEIGHT/2+50)
     text("Donovan Maric 🇭🇷", WIDTH/2-330, HEIGHT/2)
     text("Perassim Galatia 🇪🇹", WIDTH/2-320, HEIGHT/2-50)
     
