@@ -18,7 +18,7 @@ end
 
 function GameLogo:draw()
     -- Codea does not automatically call this method
-    sprite("Dropbox:GameLogo", WIDTH/2, HEIGHT/2)
+    sprite("Dropbox:game logo finished group 4", WIDTH/2, HEIGHT/2)
     
     print(ElapsedTime)
     print("End time is" .. startTimeTwo + 1)
