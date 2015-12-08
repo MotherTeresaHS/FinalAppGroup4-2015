@@ -31,6 +31,9 @@ function setup()
     Scene("mainGame", MainGame)
     Scene("endlessMode", EndlessMode)
     Scene("leaderboard", LeaderBoard)
+    Scene("worldTwo", WorldTwo)
+    Scene("worldThree", WorldThree)
+    
     Scene.Change("splash")
     
 end
