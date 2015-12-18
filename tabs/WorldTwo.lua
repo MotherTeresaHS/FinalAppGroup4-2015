@@ -3,7 +3,7 @@ local backButtonTwo
 
 WorldTwo = class()
 
---sprite("Dropbox:Blue Back Circle Button")
+--sprite("Dropbox:Yellow Back Circle Button")
 function WorldTwo:init()
     -- you can accept and set parameters here
     worldThreeButton = Button("Dropbox:Blue Forward Circle Button", vec2(950, 657))
@@ -11,7 +11,7 @@ function WorldTwo:init()
 end
 
 function WorldTwo:draw()
-    background(47, 59, 221, 255)
+    sprite("Dropbox:group 4 1", 512, 384, 1024, 768)
     fill(0, 0, 0, 255)
     fontSize(40)
     font("AmericanTypewriter-Bold")

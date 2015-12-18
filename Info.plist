@@ -11,8 +11,11 @@
 		<string>GameLogo</string>
 		<string>MainScene</string>
 		<string>MainGame</string>
+		<string>LevelsWorldOne</string>
 		<string>WorldTwo</string>
+		<string>LevelsWorldTwo</string>
 		<string>WorldThree</string>
+		<string>LevelsWorldThree</string>
 		<string>Options</string>
 		<string>Credits</string>
 		<string>Tutorial</string>
