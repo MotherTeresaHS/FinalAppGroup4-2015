@@ -18,7 +18,7 @@ end
 function SplashScreenScene:draw()
     -- Codea does not automatically call this method
     
-    sprite("Dropbox:CompanyLogo", WIDTH/2, HEIGHT/2)
+    sprite("Dropbox:finishedCompanyLogo", WIDTH/2, HEIGHT/2)
     
     print(ElapsedTime)
     print("End time is" .. startTime + 3)

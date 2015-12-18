@@ -1,14 +1,14 @@
-LeaderBoard = class()
+LevelsWorldThree = class()
 
-function LeaderBoard:init()
+function LevelsWorldThree:init(x)
     -- you can accept and set parameters here
     self.x = x
 end
 
-function LeaderBoard:draw()
+function LevelsWorldThree:draw()
     -- Codea does not automatically call this method
 end
 
-function LeaderBoard:touched(touch)
+function LevelsWorldThree:touched(touch)
     -- Codea does not automatically call this method
 end
