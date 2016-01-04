@@ -7,6 +7,7 @@
 -- Sets a blank slate for the entire program.
 
 -- global variable
+-- added comment
 topscore = nil
 
 
