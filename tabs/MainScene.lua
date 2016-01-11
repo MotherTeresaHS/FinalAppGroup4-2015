@@ -16,8 +16,10 @@ local leaderBoardButton
 local endlessButton
 
 function MainScene:init()
---sprite("Dropbox:Teal Move Scene Forward Button")
-    startButton = Button("Dropbox:Teal Move Scene Forward Button", vec2(WIDTH/2 - 75, HEIGHT/2))
+    -- Initializing everything
+    
+    -- sprite("Dropbox:finishedStartButton")
+    startButton = Button("Dropbox:finishedStartButton", vec2(WIDTH/2 - 75, HEIGHT/2))
     creditButton = Button("Dropbox:Blue Move Scene Forward Button", vec2(WIDTH/2 - 75, HEIGHT/2 - 220))
     tutorialButton = Button("Dropbox:Green Move Scene Forward Button", vec2(WIDTH/2- 75, HEIGHT/2 - 110))
     optionsButton = Button("Dropbox:setting icon", vec2(WIDTH/2 + 450, HEIGHT/2 - 325))
@@ -27,6 +29,8 @@ function MainScene:init()
 end
 
 function MainScene:draw()
+    -- Drawing everything so you see it on screen
+    
     sprite("Dropbox:finishedMenuScreen", WIDTH/2, HEIGHT/2, 1024, 768)
     fill(0, 0, 0, 255)
     fontSize(40)
@@ -43,6 +47,8 @@ end
 
 
 function MainScene:touched(touch)
+    -- Making the buttons touchable
+    
     startButton:touched(touch)
     tutorialButton:touched(touch)
     creditButton:touched(touch)

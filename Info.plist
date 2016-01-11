@@ -10,7 +10,7 @@
 		<string>CompanyLogo</string>
 		<string>GameLogo</string>
 		<string>MainScene</string>
-		<string>MainGame</string>
+		<string>WorldOne</string>
 		<string>LevelsWorldOne</string>
 		<string>WorldTwo</string>
 		<string>LevelsWorldTwo</string>
@@ -19,7 +19,6 @@
 		<string>Options</string>
 		<string>Credits</string>
 		<string>Tutorial</string>
-		<string>EndlessMode</string>
 		<string>Store</string>
 		<string>HelperClass</string>
 	</array>

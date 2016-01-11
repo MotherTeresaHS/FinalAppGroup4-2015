@@ -3,9 +3,9 @@ local backButtonTwo
 
 WorldTwo = class()
 
---sprite("Dropbox:Yellow Back Circle Button")
+
 function WorldTwo:init()
-    -- you can accept and set parameters here
+    -- sprite("Dropbox:Yellow Back Circle Button")
     worldThreeButton = Button("Dropbox:Blue Forward Circle Button", vec2(950, 657))
     backButtonTwo = Button("Dropbox:Blue Back Circle Button", vec2(100,675))
 end
@@ -22,7 +22,6 @@ function WorldTwo:draw()
 end
 
 function WorldTwo:touched(touch)
-    -- Codea does not automatically call this method
     worldThreeButton:touched(touch)
     backButtonTwo:touched(touch)
     

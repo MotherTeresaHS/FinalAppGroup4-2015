@@ -7,8 +7,13 @@
 -- Sets a blank slate for the entire program.
 
 -- global variable
--- added comment
 topscore = nil
+currentWorld = nil
+currentLevel = nil
+amountOfCoins = 100
+amountOfFreezeCards = 0
+amountOfHeartCards = 0
+
 
 
 
@@ -34,7 +39,6 @@ function setup()
     Scene("store", Store)
     Scene("tutorial", Tutorial)
     Scene("mainGame", MainGame)
-    Scene("endlessMode", EndlessMode)
     Scene("leaderboard", LeaderBoard)
     Scene("worldTwo", WorldTwo)
     Scene("worldThree", WorldThree)

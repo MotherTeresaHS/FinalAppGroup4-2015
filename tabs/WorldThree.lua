@@ -19,7 +19,6 @@ function WorldThree:draw()
 end
 
 function WorldThree:touched(touch)
-    -- Codea does not automatically call this method
     backButtonThree:touched(touch)
     
      if(backButtonThree.selected == true) then
