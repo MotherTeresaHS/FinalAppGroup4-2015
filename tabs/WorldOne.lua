@@ -16,14 +16,40 @@ local levelsFive
 MainGame = class()
 
 function MainGame:init()
-    -- sprite("Dropbox:Green Info Button")  
+    sprite("Dropbox:Blue Redo Button")
+    
     backButton = Button("Dropbox:Blue Back Circle Button", vec2(65,710))
     secondWorldButton = Button("Dropbox:Green Forward Circle Button", vec2(970, 710))
-    levelsOne = Button("Dropbox:Yellow Info Button", vec2(100, 80))
-    levelsTwo =  Button("Dropbox:Green Info Button", vec2(335, 200))
-    levelsThree =  Button("Dropbox:Green Info Button", vec2(525, 400))
-    levelsFour =  Button("Dropbox:Green Info Button", vec2(735, 250))
-    levelsFive =  Button("Dropbox:Green Info Button", vec2(850, 50))
+    
+    if (additionWorld > 0) then
+        levelsOne = Button("Dropbox:Green Info Button", vec2(100, 80))
+    else
+        levelsOne = Button("Dropbox:Blue Redo Button", vec2(100, 80))
+    end
+        
+    if (additionWorld > 1) then
+        levelsTwo = Button("Dropbox:Green Info Button", vec2(335, 200))
+    else
+        levelsTwo = Button("Dropbox:Blue Redo Button", vec2(335, 200))
+    end
+    
+    if (additionWorld > 2) then
+         levelsThree =  Button("Dropbox:Green Info Button", vec2(525, 385))
+    else
+         levelsThree =  Button("Dropbox:Blue Redo Button", vec2(525, 385))
+    end
+    
+    if (additionWorld > 3) then
+         levelsFour =  Button("Dropbox:Green Info Button", vec2(730,225))
+    else
+         levelsFour =  Button("Dropbox:Blue Redo Button", vec2(730, 225))
+    end
+    
+    if (additionWorld > 4) then
+         levelsFive =  Button("Dropbox:Green Info Button", vec2(815, 60))
+    else
+         levelsFive =  Button("Dropbox:Blue Redo Button", vec2(815, 60))
+    end
 
 end
 
@@ -47,11 +73,9 @@ function MainGame:touched(touch)
     
     backButton:touched(touch)
     secondWorldButton:touched(touch)
+    
     levelsOne:touched(touch)
     levelsTwo:touched(touch)
-    levelsThree:touched(touch)
-    levelsFour:touched(touch)
-    levelsFive:touched(touch)
     
     if(backButton.selected == true) then
         Scene.Change("play")
@@ -62,8 +86,22 @@ function MainGame:touched(touch)
     end
     
     if(levelsOne.selected == true) then
-        currentWorld = addition
-        currentLevel = 1
-        Scene.Change("levelsOne")
+        if (additionWorld > 0) then
+            currentWorld = addition
+            currentLevel = 1
+            Scene.Change("levelsOne")
+        else
+            alert("Level is locked.")
+        end
+     end
+    
+    if(levelsTwo.selected == true) then
+        if (additionWorld > 1) then
+            currentWorld = addition
+            currentLevel = 2
+            Scene.Change("levelsOne")
+        else
+            alert("Level is locked.")
+        end
     end
 end

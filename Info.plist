@@ -12,6 +12,9 @@
 		<string>MainScene</string>
 		<string>WorldOne</string>
 		<string>LevelsWorldOne</string>
+		<string>CorrectScene</string>
+		<string>IncorrectScene</string>
+		<string>AdditionWinningScene</string>
 		<string>WorldTwo</string>
 		<string>LevelsWorldTwo</string>
 		<string>WorldThree</string>

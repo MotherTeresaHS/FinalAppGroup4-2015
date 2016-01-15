@@ -18,14 +18,13 @@ local endlessButton
 function MainScene:init()
     -- Initializing everything
     
-    -- sprite("Dropbox:finishedStartButton")
+    --sprite("Dropbox:storeButton")
     startButton = Button("Dropbox:finishedStartButton", vec2(WIDTH/2 - 75, HEIGHT/2))
     creditButton = Button("Dropbox:Blue Move Scene Forward Button", vec2(WIDTH/2 - 75, HEIGHT/2 - 220))
     tutorialButton = Button("Dropbox:Green Move Scene Forward Button", vec2(WIDTH/2- 75, HEIGHT/2 - 110))
     optionsButton = Button("Dropbox:setting icon", vec2(WIDTH/2 + 450, HEIGHT/2 - 325))
-    storeButton = Button("Dropbox:Purple Move Scene Forward Button", vec2(WIDTH/2 + 50, HEIGHT/2))
-    leaderBoardButton = Button("Dropbox:Red Move Scene Forward Button", vec2(WIDTH/2 + 50, HEIGHT/2 - 220))
-    endlessButton = Button("Dropbox:Yellow Move Scene Forward Button", vec2(WIDTH/2 + 50, HEIGHT/2 - 110))
+    storeButton = Button("Dropbox:storeButton", vec2(WIDTH/2 + 50, HEIGHT/2))
+    leaderBoardButton = Button("Dropbox:Leaderboard", vec2(WIDTH/2 + 50, HEIGHT/2 - 220))
 end
 
 function MainScene:draw()
@@ -42,7 +41,6 @@ function MainScene:draw()
     optionsButton:draw()
     storeButton:draw()
     leaderBoardButton:draw()
-    endlessButton:draw()
 end
 
 
@@ -55,7 +53,6 @@ function MainScene:touched(touch)
     optionsButton:touched(touch)
     storeButton:touched(touch)
     leaderBoardButton:touched(touch)
-    endlessButton:touched(touch)
     if(startButton.selected == true) then
         Scene.Change("mainGame")
     elseif(creditButton.selected == true) then
@@ -68,8 +65,6 @@ function MainScene:touched(touch)
         Scene.Change("store")
     elseif(leaderBoardButton.selected == true) then
         Scene.Change("leaderboard")
-    elseif(endlessButton.selected == true) then
-        Scene.Change("endlessMode")
     end
  end
 

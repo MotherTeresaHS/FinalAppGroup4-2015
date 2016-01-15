@@ -11,7 +11,7 @@ function WorldTwo:init()
 end
 
 function WorldTwo:draw()
-    sprite("Dropbox:group 4 1", 512, 384, 1024, 768)
+    sprite("Dropbox:subtraction sea", WIDTH/2, HEIGHT/2, 1024, 768)
     fill(0, 0, 0, 255)
     fontSize(40)
     font("AmericanTypewriter-Bold")

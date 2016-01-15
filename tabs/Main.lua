@@ -10,13 +10,14 @@
 topscore = nil
 currentWorld = nil
 currentLevel = nil
-amountOfCoins = 100
+amountOfCoins = 0
 amountOfFreezeCards = 0
 amountOfHeartCards = 0
+amountOfPoints = 0
 
-
-
-
+additionWorld = 1
+subtractionWorld = 0
+multiplicationWorld = 0
 
 -- Use this function to perform your initial setup
 function setup()  
@@ -27,7 +28,8 @@ function setup()
     noStroke()
     pushStyle()
     
-    topScore = readGlobalData("highScore", 0)
+    amountOfCoins = readGlobalData("coins", 0)
+    
     music("A Hero's Quest:Exploration", true, 0.75)
     
     -- create the nes
@@ -40,11 +42,15 @@ function setup()
     Scene("tutorial", Tutorial)
     Scene("mainGame", MainGame)
     Scene("leaderboard", LeaderBoard)
+    Scene("worldOne", WorldOne)
     Scene("worldTwo", WorldTwo)
     Scene("worldThree", WorldThree)
     Scene("levelsOne", LevelsWorldOne)
     Scene("levelsTwo", LevelsWorldTwo)
     Scene("levelsThree", LevelsWorldThree)
+    Scene("correct", CorrectScene)
+    Scene("incorrect", IncorrectScene)
+    Scene("additionWinning", AdditionWinningScene)
     
     Scene.Change("splash")
     

@@ -19,6 +19,8 @@ function Store:init()
     heartCard  = Button("Dropbox:extraLifePowerUp", vec2(WIDTH/2-200, HEIGHT/2+100))
     buyButton  = Button ("Dropbox:Green Cancel Button", vec2(WIDTH/2+200 , HEIGHT/2-50))
     buyButton2 = Button ("Dropbox:Red Cancel Button", vec2(WIDTH/2-200 , HEIGHT/2-50))
+    
+    amountOfCoins = math.floor(amountOfCoins)
 end
 
 function Store:draw()
@@ -37,6 +39,7 @@ function Store:draw()
     text("Cost: 15 Coins", WIDTH/2+200, HEIGHT/2+210)
     text("Cost: 15 Coins", WIDTH/2-200, HEIGHT/2+210)
     text("Coins: "..amountOfCoins , WIDTH/2+300, HEIGHT/2+300)
+    text("Points: ".. amountOfPoints , WIDTH/2 - 300, HEIGHT /2 + 300)
     text("buy", WIDTH/2+200, HEIGHT/2-120)
     text("buy", WIDTH/2-200, HEIGHT/2-120)
     

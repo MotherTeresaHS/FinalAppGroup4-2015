@@ -1,67 +1,128 @@
 LevelsWorldOne = class()
 -- global to this file
 local dispenser
-local card = {}
+local card
 local numberOne
 local numberTwo
 local operator = "+"
+local answer
+local wrongAnswer
+local wrongAnswerTwo
+local wrongAnswerThree
+local answerButton
+local incorrectButton
+local incorrectButtonTwo
+local incorrectButtonThree
+local menuButton
+
 
 function LevelsWorldOne:init()
-    -- sprite("SpaceCute:Icon")
-    fill(255, 0, 2, 255)
+    -- sprite("Dropbox:Blue Back Circle Button")
+    fill(255, 35, 0, 255)
     font("AmericanTypewriter")
     fontSize(50)
-    dispenser = SpriteObject("SpaceCute:Icon", vec2(WIDTH/2, 700))
-    dispenser.draggable = false
+    card = SpriteObject("SpaceCute:Icon", vec2(WIDTH/2, 768))
+    answerButton = Button("Dropbox:Green Cancel Button", vec2(WIDTH/2, HEIGHT/2 - 300))
+    incorrectButton = Button("Dropbox:Red Cancel Button", vec2(WIDTH/2 - 100, HEIGHT/2 - 300))
+    incorrectButtonTwo = Button("Dropbox:Red Cancel Button", vec2(WIDTH/2 + 100, HEIGHT/2 - 300))
+    incorrectButtonThree = Button("Dropbox:Red Cancel Button", vec2(WIDTH/2 + 200, HEIGHT/2 - 300))
+    menuButton = Button("Dropbox:Blue Back Circle Button", vec2(100, 600))
+    
+    -- Make 2 wrong answers, not 2 right answers
     
     print(currentLevel)
     if (currentLevel == 1) then
-        x=math.random(1,100)
-        math.randomseed(x)
-        for z= 1,1 do
             numberOne = (math.random(1,5))
-        end
-        x=math.random(1,100)
-        math.randomseed(x)
-        for z= 1,1 do
             numberTwo = (math.random(1,5))
-        end
     end
+    
+    print(currentLevel)
+    if (currentLevel == 2) then
+            numberOne = (math.random(1,10))
+            numberTwo = (math.random(1,10))
+        end
+    
+    print(currentLevel)
+    if (currentLevel == 3) then
+        nummberOne = (math.random(1, 15))
+        numberTwo =(math.random(1, 15))
+    end
+        
+    if (currentLevel == 1) then
+        answer = numberOne + numberTwo
+        wrongAnswer = (math.random(1,10))
+        wrongAnswerTwo = (math.random(1,10))
+        wrongAnswerThree = (math.random(1,10))
+    end
+
+    
+    if (currentLevel == 2) then
+        answer = numberOne + numberTwo
+        wrongAnswer = (math.random(1,20))
+        wrongAnswerTwo = (math.random(1,20))
+        wrongAnswerThree = (math.random(1,20))
+    end
+    
+    if (currentLevel == 3) then
+        answer = numberOne + numberTwo
+        wrongAnswer = (math.random(1, 30))
+        wrongAnswerTwo = (math.random(1, 30))
+        wrongAnswerThree = (math.random(1, 30))
+    end
+    
+    
 end
 
 function LevelsWorldOne:draw()
-    background(0, 1, 255, 255)
-    dispenser:draw()
-    print(numberOne)
-    text(" "..numberOne.." "..operator.." "..numberTwo, WIDTH/2, HEIGHT/2)
+    sprite("Dropbox:additionForest", WIDTH/2, HEIGHT/2, 1024, 768)
     
-    if (#card > 0) then
-        local cardCounter = 1
-        while (cardCounter <= #card) do
-            card[cardCounter]:draw()
-            
-            -- move cards down the screen
-            card[cardCounter].objectCurrentLocation.y = card[cardCounter].objectCurrentLocation.y + 10
-            
-            -- remove cards
-            if (card[cardCounter].objectCurrentLocation.y > 768) then 
-                table.remove(card, cardCounter)
-            end
-            
-            cardCounter = cardCounter + 1
-        end
+    local cardLocation = vec2()
+
+    cardLocation = card.objectCurrentLocation
+    
+    if (cardLocation.y >= 300) then
+        cardLocation.y = cardLocation.y - 2
     end
+    
+    card.buttonLocation = objectCurrentLocation
+    answerButton:draw()
+    card:draw()
+    incorrectButton:draw()
+    incorrectButtonTwo:draw()
+    incorrectButtonThree:draw()
+    menuButton:draw()
+    
+    text(" "..numberOne.." "..operator.." "..numberTwo, cardLocation.x, cardLocation.y)
+    text(answer, WIDTH/2, HEIGHT/2 - 250)
+    text(wrongAnswer, WIDTH/2 - 100, HEIGHT/2 - 250)
+    text(wrongAnswerTwo, WIDTH/2 + 100, HEIGHT/2 - 250)
+    text(wrongAnswerThree, WIDTH/2 + 200, HEIGHT/2 - 250)
+    
+    
+    
 end
 
 function LevelsWorldOne:touched(touch)
-    dispenser:touched(touch)
-    -- sprite("Platformer Art:Block Special")
-    if (dispenser.selected == true) then
-        local aSingleCard
-        aSingleCard = SpriteObject("Platformer Art:Block Special", vec2(WIDTH/2, 675))
-        
-        table.insert(card, aSingleCard)
+    answerButton:touched(touch)
+    incorrectButton:touched(touch)
+    incorrectButtonTwo:touched(touch)
+    incorrectButtonThree:touched(touch)
+    menuButton:touched(touch)
+    
+    if(answerButton.selected == true) then
+        Scene.Change("additionWinning")
+        amountOfCoins = amountOfCoins + 1
+        saveGlobalData("coins", amountOfCoins)
+    elseif(incorrectButton.selected == true) then
+        Scene.Change("incorrect")
+    elseif(incorrectButtonTwo.selected == true) then
+        Scene.Change("incorrect")
+    elseif(incorrectButtonThree.selected == true) then
+        Scene.Change("incorrect")
     end
     
-    print(#card)
+    if(menuButton.selected == true) then
+        Scene.Change("play")
+    end
+    
 end
