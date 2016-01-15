@@ -11,13 +11,11 @@ GameLogo = class()
 local startTimeTwo
 
 function GameLogo:init()
-    -- you can accept and set parameters here
     
     startTimeTwo = ElapsedTime
 end
 
 function GameLogo:draw()
-    -- Codea does not automatically call this method
     sprite("Dropbox:finishedGameLogoMini", WIDTH/2, HEIGHT/2)
     
     print(ElapsedTime)
@@ -29,5 +27,4 @@ function GameLogo:draw()
 end
 
 function GameLogo:touched(touch)
-    -- Codea does not automatically call this method
 end
