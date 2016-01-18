@@ -9,14 +9,12 @@
 Tutorial = class()
 
 function Tutorial:init()
-    -- you can accept and set parameters here
 end
 
 function Tutorial:draw()
-    -- Codea does not automatically call this method
     background(255, 178, 0, 255)
 end
 
 function Tutorial:touched(touch)
-    -- Codea does not automatically call this method
+
 end
