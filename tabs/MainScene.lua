@@ -18,9 +18,9 @@ local endlessButton
 function MainScene:init()
     -- Initializing everything
     
-    --sprite("Dropbox:storeButton")
+    --sprite("Dropbox:subtraction sea")
     startButton = Button("Dropbox:finishedStartButton", vec2(WIDTH/2 - 75, HEIGHT/2))
-    creditButton = Button("Dropbox:Blue Move Scene Forward Button", vec2(WIDTH/2 - 12, HEIGHT/2 - 220))
+    creditButton = Button("Dropbox:creditsButton", vec2(WIDTH/2 - 12, HEIGHT/2 - 220))
     tutorialButton = Button("Dropbox:Green Move Scene Forward Button", vec2(WIDTH/2- 75, HEIGHT/2 - 110))
     optionsButton = Button("Dropbox:setting icon", vec2(WIDTH/2 + 450, HEIGHT/2 - 325))
     storeButton = Button("Dropbox:storeButton", vec2(WIDTH/2 + 50, HEIGHT/2))
@@ -63,8 +63,6 @@ function MainScene:touched(touch)
         Scene.Change("options")
     elseif(storeButton.selected == true) then
         Scene.Change("store")
-    elseif(leaderBoardButton.selected == true) then
-        Scene.Change("leaderboard")
     end
  end
 
