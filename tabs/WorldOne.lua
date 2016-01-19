@@ -24,31 +24,31 @@ function MainGame:init()
     if (additionWorld > 0) then
         levelsOne = Button("Dropbox:Green Info Button", vec2(100, 80))
     else
-        levelsOne = Button("Dropbox:Blue Redo Button", vec2(100, 80))
+        levelsOne = Button("Dropbox:lockIcon", vec2(100, 80))
     end
         
     if (additionWorld > 1) then
         levelsTwo = Button("Dropbox:Green Info Button", vec2(335, 200))
     else
-        levelsTwo = Button("Dropbox:Blue Redo Button", vec2(335, 200))
+        levelsTwo = Button("Dropbox:lockIcon", vec2(335, 200))
     end
     
     if (additionWorld > 2) then
          levelsThree =  Button("Dropbox:Green Info Button", vec2(525, 385))
     else
-         levelsThree =  Button("Dropbox:Blue Redo Button", vec2(525, 385))
+         levelsThree =  Button("Dropbox:lockIcon", vec2(525, 385))
     end
     
     if (additionWorld > 3) then
          levelsFour =  Button("Dropbox:Green Info Button", vec2(730,225))
     else
-         levelsFour =  Button("Dropbox:Blue Redo Button", vec2(730, 225))
+         levelsFour =  Button("Dropbox:lockIcon", vec2(730, 225))
     end
     
     if (additionWorld > 4) then
          levelsFive =  Button("Dropbox:Green Info Button", vec2(815, 60))
     else
-         levelsFive =  Button("Dropbox:Blue Redo Button", vec2(815, 60))
+         levelsFive =  Button("Dropbox:lockIcon", vec2(815, 60))
     end
 
 end

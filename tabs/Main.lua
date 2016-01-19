@@ -5,7 +5,7 @@
 -- Created for: ICS2OR-1
 -- Main starting screen
 -- Sets a blank slate for the entire program.
-
+DEBUG_GAMECENTER = true
 -- global variable
 topscore = nil
 currentWorld = nil

@@ -26,7 +26,7 @@ function LevelsWorldOne:init()
     incorrectButton = Button("Dropbox:Red Cancel Button", vec2(WIDTH/2 - 100, HEIGHT/2 - 300))
     incorrectButtonTwo = Button("Dropbox:Red Cancel Button", vec2(WIDTH/2 + 100, HEIGHT/2 - 300))
     incorrectButtonThree = Button("Dropbox:Red Cancel Button", vec2(WIDTH/2 + 200, HEIGHT/2 - 300))
-    menuButton = Button("Dropbox:Blue Back Circle Button", vec2(100, 600))
+    menuButton = Button("Dropbox:Blue Back Circle Button", vec2(65, 710))
     
     -- Make 2 wrong answers, not 2 right answers
     
