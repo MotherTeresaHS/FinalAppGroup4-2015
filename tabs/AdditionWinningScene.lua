@@ -17,9 +17,17 @@ function AdditionWinningScene:draw()
         additionWorld = 2
         Scene.Change("worldOne")
         print("The end time is" .. ElapsedTime)
+    elseif(additionWorld == 2) then
+        additionWorld = 3
+        Scene.Change("worldOne")
+    elseif(additionWorld == 3) then
+        additionWorld = 4
+        Scene.Change("worldOne")
+    elseif(additionWorld == 4) then
+        additionWorld = 5
+        Scene.Change("worldOne")
     end
 end
-
+        
 function AdditionWinningScene:touched(touch)
-    
 end

@@ -10,6 +10,7 @@
 topscore = nil
 currentWorld = nil
 currentLevel = nil
+amountOfLives = nil
 amountOfCoins = 0
 amountOfFreezeCards = 0
 amountOfHeartCards = 0
@@ -29,6 +30,9 @@ function setup()
     pushStyle()
     
     amountOfCoins = readGlobalData("coins", 0)
+    amountOfFreezeCards = readGlobalData("freeze", 0)
+    amountOfHeartCards = readGlobalData("heart", 0)
+    amountOfLives = 3
     
     music("A Hero's Quest:Exploration", true, 0.75)
     
