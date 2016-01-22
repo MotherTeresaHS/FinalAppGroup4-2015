@@ -5,18 +5,20 @@
 -- Created for: ICS2OR-1
 -- Main starting screen
 -- Sets a blank slate for the entire program.
+
 DEBUG_GAMECENTER = true
 -- global variable
 topscore = nil
 currentWorld = nil
 currentLevel = nil
+amountOfLives = nil
 amountOfCoins = 0
 amountOfFreezeCards = 0
 amountOfHeartCards = 0
 amountOfPoints = 0
 
 additionWorld = 1
-subtractionWorld = 0
+subtractionWorld = 1
 multiplicationWorld = 0
 
 -- Use this function to perform your initial setup
@@ -29,6 +31,9 @@ function setup()
     pushStyle()
     
     amountOfCoins = readGlobalData("coins", 0)
+    amountOfFreezeCards = readGlobalData("freeze", 0)
+    amountOfHeartCards = readGlobalData("heart", 0)
+    amountOfLives = 3
     
     music("A Hero's Quest:Exploration", true, 0.75)
     
@@ -50,7 +55,7 @@ function setup()
     Scene("levelsThree", LevelsWorldThree)
     Scene("correct", CorrectScene)
     Scene("incorrect", IncorrectScene)
-    Scene("additionWinning", AdditionWinningScene)
+    Scene("winning", WinningScene)
     
     Scene.Change("splash")
     

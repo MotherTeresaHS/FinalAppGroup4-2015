@@ -21,6 +21,8 @@ function Store:init()
     buyButton2 = Button ("Dropbox:Red Cancel Button", vec2(WIDTH/2-200 , HEIGHT/2-50))
     
     amountOfCoins = math.floor(amountOfCoins)
+    amountOfFreezeCards = math.floor(amountOfFreezeCards)
+    amountOfHeartCards = math.floor(amountOfHeartCards)
 end
 
 function Store:draw()
@@ -39,9 +41,8 @@ function Store:draw()
     text("Cost: 15 Coins", WIDTH/2+200, HEIGHT/2+210)
     text("Cost: 15 Coins", WIDTH/2-200, HEIGHT/2+210)
     text("Coins: "..amountOfCoins , WIDTH/2+300, HEIGHT/2+300)
-    text("Points: ".. amountOfPoints , WIDTH/2 - 300, HEIGHT /2 + 300)
-    text("buy", WIDTH/2+200, HEIGHT/2-120)
-    text("buy", WIDTH/2-200, HEIGHT/2-120)
+    text("Buy", WIDTH/2+200, HEIGHT/2-120)
+    text("Buy", WIDTH/2-200, HEIGHT/2-120)
     
     fontSize(40)
     text("amount you have: "..amountOfFreezeCards, WIDTH/2+200, HEIGHT/2-200)
@@ -60,7 +61,7 @@ function Store:touched(touch)
     if(buyButton.selected == true)then
         if(amountOfCoins >= 15 )then
             amountOfCoins  = amountOfCoins  - 15
-            amountOfFreezeCards = amountOfFreezeCards+1
+            amountOfFreezeCards = amountOfFreezeCards + 1
         else
             alert("Not enough coins.", "Can't buy freeze card.")
         end
