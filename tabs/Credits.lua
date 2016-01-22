@@ -31,7 +31,6 @@ function Credits:draw()
     text("Jacob Braun", WIDTH/2-360, HEIGHT/2+100)
     text("Lucas Scuccato", WIDTH/2-340, HEIGHT/2+50)
     text("Donovan Maric", WIDTH/2-330, HEIGHT/2)
-    text("Perassim Galatia", WIDTH/2-320, HEIGHT/2-50)
     
     -- The "Special Thanks" people
     text("Patrick Coxall", WIDTH/2+10, HEIGHT/2-250)

@@ -13,12 +13,12 @@ local returnButton
 
 Options = class()
 
-sprite("Dropbox:musicOffButton")
+sprite("Dropbox:Yellow Redo Button")
 
 function Options:init()
     
-    musicOnButton = Button("Dropbox:musicOnButton", vec2(550,600))
-    musicOffButton = Button("Dropbox:musicOffButton", vec2(400, 600))
+    musicOnButton = Button("Dropbox:Star Black", vec2(550,600))
+    musicOffButton = Button("Dropbox:Star Gold", vec2(400, 600))
     restartButton = Button("Dropbox:Yellow Redo Button", vec2(500, 415))
     returnButton = Button("Dropbox:Yellow Back Circle Button", vec2(550, 200))
 end
