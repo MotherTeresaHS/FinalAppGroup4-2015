@@ -18,7 +18,7 @@ amountOfHeartCards = 0
 amountOfPoints = 0
 
 additionWorld = 1
-subtractionWorld = 0
+subtractionWorld = 1
 multiplicationWorld = 0
 
 -- Use this function to perform your initial setup

@@ -13,7 +13,8 @@ function WinningScene:draw()
     text("You Win! Congratulations!", WIDTH/2, HEIGHT/2)
     print(ElapsedTime)
     print("End time is" .. startTimeFive + 3)
-    if(startTimeFive +  8 < ElapsedTime) then 
+    if(startTimeFive +  5 < ElapsedTime) then 
+        if(additionWorld == 1) then
         additionWorld = 2
         Scene.Change("worldOne")
         print("The end time is" .. ElapsedTime)
@@ -27,9 +28,25 @@ function WinningScene:draw()
         additionWorld = 5
         Scene.Change("worldOne")
     elseif(additionWorld == 5) then
-        additionWorld = 5
         subtractionWorld = 1
     end
+end
+    
+    if(startTimeFive + 5 < ElapsedTime) then
+        if(subtractionWorld == 1) then
+        subtractionWorld = 2
+        Scene.Change("worldTwo")
+    elseif(subtractionWorld == 2) then
+        subtractionWorld = 3
+        Scene.Change("worldTwo")
+    elseif(subtractionWorld == 3) then
+        subtractionWorld = 4
+        Scene.Change("worldTwo")
+    elseif(subtractionWorld == 4) then
+        subtractionWorld = 5
+        Scene.Change("worldTwo")
+    end
+end
 end
         
 function WinningScene:touched(touch)

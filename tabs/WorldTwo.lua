@@ -13,36 +13,36 @@ local subtractionLevelsFive
 
 
 function WorldTwo:init()
-     --sprite("Dropbox:lockIcon")
+    -- sprite("Dropbox:levelButton1")
     worldThreeButton = Button("Dropbox:Blue Forward Circle Button", vec2(950, 657))
     backButtonTwo = Button("Dropbox:Blue Back Circle Button", vec2(100,675))
     
     if (subtractionWorld > 0) then
-        subtractionLevelsOne = Button("Dropbox:Green Info Button", vec2(100, 375))
+        subtractionLevelsOne = Button("Dropbox:levelButton1", vec2(100, 375))
     else
         subtractionLevelsOne = Button("Dropbox:lockIcon", vec2(100, 375))
     end
         
     if (subtractionWorld > 1) then
-        subtractionLevelsTwo = Button("Dropbox:Green Info Button", vec2(340, 375))
+        subtractionLevelsTwo = Button("Dropbox:levelButton2", vec2(340, 375))
     else
         subtractionLevelsTwo = Button("Dropbox:lockIcon", vec2(340, 375))
     end
     
     if (subtractionWorld > 2) then
-         subtractionLevelsThree =  Button("Dropbox:Green Info Button", vec2(580, 385))
+         subtractionLevelsThree =  Button("Dropbox:levelButton3", vec2(580, 385))
     else
          subtractionLevelsThree =  Button("Dropbox:lockIcon", vec2(580, 385))
     end
     
     if (subtractionWorld > 3) then
-         subtractionLevelsFour =  Button("Dropbox:Green Info Button", vec2(800,375))
+         subtractionLevelsFour =  Button("Dropbox:levelButton4", vec2(800,375))
     else
          subtractionLevelsFour =  Button("Dropbox:lockIcon", vec2(800, 375))
     end
     
     if (subtractionWorld > 4) then
-         subtractionLevelsFive =  Button("Dropbox:Green Info Button", vec2(925, 260))
+         subtractionLevelsFive =  Button("Dropbox:levelButton5", vec2(925, 260))
     else
          subtractionLevelsFive =  Button("Dropbox:lockIcon", vec2(925, 260))
     end

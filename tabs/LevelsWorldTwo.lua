@@ -54,7 +54,7 @@ function LevelsWorldTwo:init()
     
     if (currentLevel == 4) then
         print(currentLevel)
-        numberOne = (math.random(1, 20))
+        subtractionNumberOne = (math.random(1, 20))
         subtractionNumberTwo = (math.random(1, 20))
     end
     
@@ -67,39 +67,39 @@ function LevelsWorldTwo:init()
     -- answers
     
     if (currentLevel == 1) then
-        subtractionAnswer = subtractionNumberOne + subtractionNumberTwo
+        subtractionAnswer = subtractionNumberOne - subtractionNumberTwo
         subtractionWrongAnswer = (math.random(1,10))
-        subtactionWrongAnswerTwo = (math.random(1,10))
+        subtractionWrongAnswerTwo = (math.random(1,10))
         subtractionWrongAnswerThree = (math.random(1,10))
     end
 
     
     if (currentLevel == 2) then
-        subtractionAnswer = subtractionNumberOne + subtractionNumberTwo
+        subtractionAnswer = subtractionNumberOne - subtractionNumberTwo
         subtractionWrongAnswer = (math.random(1,20))
         subtractionWrongAnswerTwo = (math.random(1,20))
         subtractionWrongAnswerThree = (math.random(1,20))
     end
     
     if (currentLevel == 3) then
-        subtractionAnswer = subtractionNumberOne + subtractionNumberTwo
+        subtractionAnswer = subtractionNumberOne - subtractionNumberTwo
         subtractionWrongAnswer = (math.random(1, 30))
         subtractionWrongAnswerTwo = (math.random(1, 30))
         subtractionWrongAnswerThree = (math.random(1, 30))
     end
     
     if (currentLevel == 4) then
-        subtractionAnswer = subtractionNumberOne + subtractionNumberTwo
+        subtractionAnswer = subtractionNumberOne - subtractionNumberTwo
         subtractionWrongAnswer = (math.random(1, 40))
         subtractionWrongAnswerTwo = (math.random(1, 40))
         subtractionWrongAnswerThree = (math.random(1, 40))
     end
     
     if (currentLevel == 5) then
-        answer = numberOne + numberTwo
-        wrongAnswer = (math.random(1, 50))
-        wrongAnswerTwo = (math.random(1, 50))
-        wrongAnswerThree = (math.random(1, 50))
+        subtractionAnswer = subtractionNumberOne - subtractionNumberTwo
+        subtractionWrongAnswer = (math.random(1, 50))
+        subtractionWrongAnswerTwo = (math.random(1, 50))
+        subtractionWrongAnswerThree = (math.random(1, 50))
     end
     
 end
@@ -123,10 +123,12 @@ function LevelsWorldTwo:draw()
     subtractionIncorrectButtonThree:draw()
     menuButtonTwo:draw()
     
-    text(subtractionAnswer, WIDTH/2, HEIGHT/2 - 250)
-    text(subtractionWrongAnswer, WIDTH/2 - 100, HEIGHT/2 - 250)
-    text(subtractionWrongAnswerTwo, WIDTH/2 + 100, HEIGHT/2 - 250)
-    text(subtractionWrongAnswerThree, WIDTH/2 + 200, HEIGHT/2 - 250)
+    text(" "..subtractionNumberOne.." "..subtractionOperator.." "..subtractionNumberTwo, subtractionCardLocation.x, subtractionCardLocation.y)
+    
+    text(" "..subtractionAnswer, WIDTH/2, HEIGHT/2 - 250)
+    text(" "..subtractionWrongAnswer, WIDTH/2 - 100, HEIGHT/2 - 250)
+    text(" "..subtractionWrongAnswerTwo, WIDTH/2 + 100, HEIGHT/2 - 250)
+    text(" "..subtractionWrongAnswerThree, WIDTH/2 + 200, HEIGHT/2 - 250)
     text("Lives: "..amountOfLives, 900, 600)
     
     
@@ -136,7 +138,7 @@ function LevelsWorldTwo:touched(touch)
     subtractionAnswerButton:touched(touch)
     subtractionIncorrectButton:touched(touch)
     subtractionIncorrectButtonTwo:touched(touch)
-    subractionIncorrectButtonThree:touched(touch)
+    subtractionIncorrectButtonThree:touched(touch)
     menuButtonTwo:touched(touch)
     
     if(subtractionAnswerButton.selected == true) then
