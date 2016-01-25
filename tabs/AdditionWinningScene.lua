@@ -1,11 +1,11 @@
-WinningScene = class()
+AdditionWinningScene = class()
 local startTimeFive
 
-function WinningScene:init()
+function AdditionWinningScene:init()
     startTimeFive = ElapsedTime
 end
 
-function WinningScene:draw()
+function AdditionWinningScene:draw()
     background(255, 200, 0, 255)
     fill(0, 0, 0, 255)
     font("AmericanTypewriter")
@@ -30,24 +30,8 @@ function WinningScene:draw()
     elseif(additionWorld == 5) then
         subtractionWorld = 1
     end
-end
-    
-    if(startTimeFive + 5 < ElapsedTime) then
-        if(subtractionWorld == 1) then
-        subtractionWorld = 2
-        Scene.Change("worldTwo")
-    elseif(subtractionWorld == 2) then
-        subtractionWorld = 3
-        Scene.Change("worldTwo")
-    elseif(subtractionWorld == 3) then
-        subtractionWorld = 4
-        Scene.Change("worldTwo")
-    elseif(subtractionWorld == 4) then
-        subtractionWorld = 5
-        Scene.Change("worldTwo")
-    end
-end
+ end
 end
         
-function WinningScene:touched(touch)
+function AdditionWinningScene:touched(touch)
 end

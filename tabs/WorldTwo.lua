@@ -4,7 +4,6 @@ local backButtonTwo
 WorldTwo = class()
 
 local backButton
-local secondWorldButton
 local subtractionLevelsOne
 local subtractionLevelsTwo
 local subtractionLevelsThree
