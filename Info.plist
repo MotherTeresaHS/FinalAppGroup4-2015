@@ -15,6 +15,8 @@
 		<string>CorrectScene</string>
 		<string>IncorrectScene</string>
 		<string>AdditionWinningScene</string>
+		<string>SubtractionWinningScene</string>
+		<string>MultiplicationWinningScene</string>
 		<string>WorldTwo</string>
 		<string>LevelsWorldTwo</string>
 		<string>WorldThree</string>
