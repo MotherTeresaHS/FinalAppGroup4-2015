@@ -2,44 +2,44 @@ local backButtonThree
 
 WorldThree = class()
 
-local levelsOne
-local levelsTwo
-local levelsThree
-local levelsFour
-local levelsFive
+local multiplicationLevelsOne
+local multiplicationLevelsTwo
+local multiplicationLevelsThree
+local multiplicationLevelsFour
+local multiplicationLevelsFive
 
 function WorldThree:init()
-       -- sprite("Dropbox:Yellow Back Rectangle Button")
+     -- sprite("Dropbox:Yellow Back Rectangle Button")
     backButtonThree = Button("Dropbox:Yellow Back Circle Button", vec2(100, 675))
     
       if (multiplicationWorld > 0) then
-        levelsOne = Button("Dropbox:Green Info Button", vec2(175, 100))
+        multiplicationLevelsOne = Button("Dropbox:levelButton1", vec2(175, 100))
     else
-        levelsOne = Button("Dropbox:lockIcon", vec2(175, 100))
+        multiplicationLevelsOne = Button("Dropbox:lockIcon", vec2(175, 100))
     end
         
     if (multiplicationWorld > 1) then
-        levelsTwo = Button("Dropbox:Green Info Button", vec2(300, 375))
+        multiplicationLevelsTwo = Button("Dropbox:levelButton2", vec2(300, 375))
     else
-        levelsTwo = Button("Dropbox:lockIcon", vec2(300, 375))
+        multiplicationLevelsTwo = Button("Dropbox:lockIcon", vec2(300, 375))
     end
     
     if (multiplicationWorld > 2) then
-         levelsThree =  Button("Dropbox:Green Info Button", vec2(510, 600))
+        multiplicationLevelsThree =  Button("Dropbox:levelButton3", vec2(510, 600))
     else
-         levelsThree =  Button("Dropbox:lockIcon", vec2(510, 600))
+        multiplicationLevelsThree =  Button("Dropbox:lockIcon", vec2(510, 600))
     end
     
     if (multiplicationWorld > 3) then
-         levelsFour =  Button("Dropbox:Green Info Button", vec2(700, 375))
+        multiplicationLevelsFour =  Button("Dropbox:levelButton4", vec2(700, 375))
     else
-         levelsFour =  Button("Dropbox:lockIcon", vec2(700, 375))
+        multiplicationLevelsFour =  Button("Dropbox:lockIcon", vec2(700, 375))
     end
     
     if (multiplicationWorld > 4) then
-         levelsFive =  Button("Dropbox:Green Info Button", vec2(850, 100))
+        multiplicationLevelsFive =  Button("Dropbox:levelButton5", vec2(850, 100))
     else
-         levelsFive =  Button("Dropbox:lockIcon", vec2(850, 100))
+        multiplicationLevelsFive =  Button("Dropbox:lockIcon", vec2(850, 100))
     end
 end
 
@@ -52,18 +52,73 @@ function WorldThree:draw()
     text("Multiplication Mountain", WIDTH/2, HEIGHT/2+300)
     
     backButtonThree:draw()
-    
-    levelsOne:draw()
-    levelsTwo:draw()
-    levelsThree:draw()
-    levelsFour:draw()
-    levelsFive:draw()
+    multiplicationLevelsOne:draw()
+    multiplicationLevelsTwo:draw()
+    multiplicationLevelsThree:draw()
+    multiplicationLevelsFour:draw()
+    multiplicationLevelsFive:draw()
 end
 
 function WorldThree:touched(touch)
+    
     backButtonThree:touched(touch)
+    multiplicationLevelsOne:touched(touch)
+    multiplicationLevelsTwo:touched(touch)
+    multiplicationLevelsThree:touched(touch)
+    multiplicationLevelsFour:touched(touch)
+    multiplicationLevelsFive:touched(touch)
     
      if(backButtonThree.selected == true) then
         Scene.Change("worldTwo")
     end
+    
+    if(multiplicationLevelsOne.selected == true) then
+        if (multiplicationWorld > 0) then
+            currentWorld = multiplication
+            currentLevel = 1
+            Scene.Change("levelsThree")
+        else
+            alert("Level is locked.")
+        end
+     end
+    
+    if(multiplicationLevelsTwo.selected == true) then
+        if (multiplicationWorld > 1) then
+            currentWorld = multiplication
+            currentLevel = 2
+            Scene.Change("levelsThree")
+        else
+            alert("Level is locked.")
+        end
+    end
+    
+    if(multiplicationLevelsThree.selected == true) then
+        if (multiplicationWorld > 2) then
+            currentWorld = multiplication
+            currentLevel = 3
+            Scene.Change("levelsThree")
+        else
+            alert("Level is locked.")
+        end
+    end
+    
+    if(multiplicationLevelsFour.selected == true) then
+        if (multiplicationWorld > 3) then
+            currentWorld = multiplication
+            currentLevel = 4
+            Scene.Change("levelsThree")
+        else
+            alert("Level is locked.")
+        end
+    end
+    
+    if(multiplicationLevelsFive.selected == true) then
+        if (multiplicationWorld > 4) then
+            currentWorld = multiplication
+            currentLevel = 5
+            Scene.Change("levelsThree")
+        else
+            alert("Level is locked.")
+        end
+    end    
 end

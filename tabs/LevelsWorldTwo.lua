@@ -142,7 +142,7 @@ function LevelsWorldTwo:touched(touch)
     menuButtonTwo:touched(touch)
     
     if(subtractionAnswerButton.selected == true) then
-        Scene.Change("winning")
+        Scene.Change("subtractionWinning")
         amountOfCoins = amountOfCoins + 1
         saveGlobalData("coins", amountOfCoins)
     elseif(subtractionIncorrectButton.selected == true) then

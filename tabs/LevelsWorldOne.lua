@@ -14,7 +14,6 @@ local incorrectButtonTwo
 local incorrectButtonThree
 local menuButton
 
-
 function LevelsWorldOne:init()
     -- sprite("Dropbox:equationCard")
     fill(255, 35, 0, 255)
@@ -27,8 +26,9 @@ function LevelsWorldOne:init()
     incorrectButtonThree = Button("Dropbox:button", vec2(WIDTH/2 + 200, HEIGHT/2 - 300))
     menuButton = Button("Dropbox:Blue Back Circle Button", vec2(100, 600))
     
-    -- Make 2 wrong answers, not 2 right answers
+    additionTimer = ElapsedTime
     
+    -- Make 2 wrong answers, not 2 right answers
     -- levels
     
     if (currentLevel == 1) then
@@ -128,7 +128,6 @@ function LevelsWorldOne:draw()
     text(wrongAnswerThree, WIDTH/2 + 200, HEIGHT/2 - 250)
     text("Lives: "..amountOfLives, 900, 600)
     
-    
 end
 
 function LevelsWorldOne:touched(touch)
@@ -139,7 +138,7 @@ function LevelsWorldOne:touched(touch)
     menuButton:touched(touch)
     
     if(answerButton.selected == true) then
-        Scene.Change("winning")
+        Scene.Change("additionWinning")
         amountOfCoins = amountOfCoins + 1
         saveGlobalData("coins", amountOfCoins)
     elseif(incorrectButton.selected == true) then

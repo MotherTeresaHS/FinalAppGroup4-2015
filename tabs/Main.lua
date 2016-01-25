@@ -19,7 +19,7 @@ amountOfPoints = 0
 
 additionWorld = 1
 subtractionWorld = 1
-multiplicationWorld = 0
+multiplicationWorld = 1
 
 -- Use this function to perform your initial setup
 function setup()  
@@ -55,7 +55,9 @@ function setup()
     Scene("levelsThree", LevelsWorldThree)
     Scene("correct", CorrectScene)
     Scene("incorrect", IncorrectScene)
-    Scene("winning", WinningScene)
+    Scene("additionWinning", AdditionWinningScene)
+    Scene("subtractionWinning", SubtractionWinningScene)
+    Scene("multiplicationWinning", MultiplicationWinningScene)
     
     Scene.Change("splash")
     
