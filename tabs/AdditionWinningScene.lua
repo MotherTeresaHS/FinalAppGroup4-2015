@@ -29,6 +29,7 @@ function AdditionWinningScene:draw()
         Scene.Change("worldOne")
     elseif(additionWorld == 5) then
         subtractionWorld = 1
+        Scene.Change("worldOne")
     end
  end
 end

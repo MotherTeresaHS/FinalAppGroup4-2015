@@ -18,13 +18,13 @@ amountOfHeartCards = 0
 amountOfPoints = 0
 
 additionWorld = 1
-subtractionWorld = 1
-multiplicationWorld = 1
+subtractionWorld = 0
+multiplicationWorld = 0
 
 -- Use this function to perform your initial setup
 function setup()  
     supportedOrientations(LANDSCAPE_ANY)
-    displayMode(FULLSCREEN)
+    displayMode(FULLSCREEN_NO_BUTTONS)
     noFill()
     noSmooth()
     noStroke()
@@ -53,8 +53,9 @@ function setup()
     Scene("levelsOne", LevelsWorldOne)
     Scene("levelsTwo", LevelsWorldTwo)
     Scene("levelsThree", LevelsWorldThree)
-    Scene("correct", CorrectScene)
-    Scene("incorrect", IncorrectScene)
+    Scene("incorrect", AdditionIncorrectScene)
+    Scene("subtractionIncorrect", SubtractionIncorrectScene)
+    Scene("multiplicationIncorrect", MultiplicationIncorrectScene)
     Scene("additionWinning", AdditionWinningScene)
     Scene("subtractionWinning", SubtractionWinningScene)
     Scene("multiplicationWinning", MultiplicationWinningScene)
@@ -65,7 +66,6 @@ end
 
 -- This function gets called once every frame
 function touched(touch)
-    
    Scene.Touched(touch)
 end
 

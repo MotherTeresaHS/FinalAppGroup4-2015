@@ -147,13 +147,13 @@ function LevelsWorldTwo:touched(touch)
         saveGlobalData("coins", amountOfCoins)
     elseif(subtractionIncorrectButton.selected == true) then
         amountOfLives = amountOfLives - 1 
-        Scene.Change("incorrect")
+        Scene.Change("subtractionIncorrect")
     elseif(subtractionIncorrectButtonTwo.selected == true) then
         amountOfLives = amountOfLives - 1
-        Scene.Change("incorrect")
+        Scene.Change("subtractionIncorrect")
     elseif(subtractionIncorrectButtonThree.selected == true) then
         amountOfLives = amountOfLives - 1
-        Scene.Change("incorrect")
+        Scene.Change("subtractionIncorrect")
     elseif(amountOfLives <= 0) then
         Scene.Change("play")
     end
