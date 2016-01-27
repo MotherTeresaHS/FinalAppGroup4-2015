@@ -16,14 +16,14 @@ function MultiplicationWinningScene:draw()
     if(startTimeSeven +  5 < ElapsedTime) then 
         if(multiplicationWorld == 1) then
         multiplicationWorld = 2
-        Scene.Change("worldTwo")
+        Scene.Change("worldThree")
         print("The end time is" .. ElapsedTime)
     elseif(multiplicationWorld == 2) then
         multiplicationWorld = 3
-        Scene.Change("worldTwo")
+        Scene.Change("worldThree")
     elseif(multiplicationWorld == 3) then
         multiplicationWorld = 4
-        Scene.Change("worldTwo")
+        Scene.Change("worldThree")
     elseif(multiplicationWorld == 4) then
         multiplicationWorld = 5
         Scene.Change("worldThree")
